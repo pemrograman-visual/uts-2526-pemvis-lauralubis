@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="fibonacci_sum"/>
+        <attribute name="authors" value="LENOVO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-17 04:45:46 PM"/>
+        <attribute name="created" value="TEVOT1ZPO0xBUFRPUC1FOUJVTEIwSzsyMDI1LTEwLTE3OzAyOjA2OjAzIFBNOzI3OTE="/>
+        <attribute name="edited" value="TEVOT1ZPO0xBUFRPUC1FOUJVTEIwSzsyMDI1LTEwLTE3OzA0OjQ1OjQ2IFBNOzI7MjkxMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x, y, temp, jumlah, n, i" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <assign variable="x" expression="1"/>
+            <assign variable="y" expression="1"/>
+            <assign variable="jumlah" expression="0"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <assign variable="jumlah" expression="jumlah+x"/>
+                <assign variable="temp" expression="x"/>
+                <assign variable="x" expression="y"/>
+                <assign variable="y" expression="temp+y"/>
+            </for>
+            <output expression="jumlah" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

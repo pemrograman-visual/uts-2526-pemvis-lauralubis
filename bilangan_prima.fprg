@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="bilangan_prima"/>
+        <attribute name="authors" value="JESSICA"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-17 04:41:41 PM"/>
+        <attribute name="created" value="SkVTU0lDQTtMQVBUT1AtSThOM1FDREw7MjAyNS0xMC0xNzswNDoyNTo0OCBQTTsyODU4"/>
+        <attribute name="edited" value="SkVTU0lDQTtMQVBUT1AtSThOM1FDREw7MjAyNS0xMC0xNzswNDo0MTo0MSBQTTsxOzI5NTc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <assign variable="i" expression="2"/>
+            <while expression="i&lt;=n">
+                <if expression="isPrima(i)">
+                    <then>
+                        <output expression="i" newline="True"/>
+                        <assign variable="i" expression="i+1"/>
+                    </then>
+                    <else/>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

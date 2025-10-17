@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="nilai_analisis"/>
+        <attribute name="authors" value="LENOVO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-17 04:48:27 PM"/>
+        <attribute name="created" value="TEVOT1ZPO0xBUFRPUC1FOUJVTEIwSzsyMDI1LTEwLTE3OzAyOjE0OjA2IFBNOzI3OTM="/>
+        <attribute name="edited" value="TEVOT1ZPO0xBUFRPUC1FOUJVTEIwSzsyMDI1LTEwLTE3OzAyOjM1OjE0IFBNOzE7TEVOT1ZPO0xBUFRPUC1FOUJVTEIwSzsyMDI1LTEwLTE3OzAxOjQyOjI1IFBNOzU3NTY="/>
+        <attribute name="edited" value="TEVOT1ZPO0xBUFRPUC1FOUJVTEIwSzsyMDI1LTEwLTE3OzA0OjQ4OjI3IFBNOzM7MjkxNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, JumlahMahasiswa" type="Integer" array="False" size=""/>
+            <declare name="NilaiRatarata, Total, Maks, Min" type="Real" array="False" size=""/>
+            <declare name="NilaiMahasiswa" type="Real" array="True" size="4"/>
+            <assign variable="Total" expression="0"/>
+            <output expression="&quot;Jumlah Mahasiswa&quot;" newline="True"/>
+            <input variable="JumlahMahasiswa"/>
+            <for variable="n" start="0" end="3" direction="inc" step="1">
+                <output expression="&quot;Masukkan nilai ke-&quot;&amp;n+1&amp;&quot;.&quot;" newline="True"/>
+                <input variable="NilaiMahasiswa[n]"/>
+                <assign variable="Total" expression="Total+NilaiMahasiswa[n]"/>
+            </for>
+            <assign variable="NilaiRatarata" expression="Total/4"/>
+            <assign variable="Maks" expression="NilaiMahasiswa[0]"/>
+            <for variable="n" start="1" end="3" direction="inc" step="1">
+                <if expression="NilaiMahasiswa[n]&gt;Maks">
+                    <then>
+                        <assign variable="Maks" expression="NilaiMahasiswa[n]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <assign variable="Min" expression="NilaiMahasiswa[0]"/>
+            <for variable="n" start="1" end="3" direction="inc" step="1">
+                <if expression="NilaiMahasiswa[n]&lt;min">
+                    <then>
+                        <assign variable="Min" expression="NilaiMahasiswa[n]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;Rata-rata = &quot;&amp;NilaiRatarata" newline="True"/>
+            <output expression="&quot;Tertinggi = &quot;&amp;Maks" newline="True"/>
+            <output expression="&quot;Terendah = &quot;&amp;Min" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
